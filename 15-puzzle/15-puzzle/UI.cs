@@ -20,7 +20,25 @@ namespace _15_puzzle
         }
         public void Output()
         {
-            Console.WriteLine(Game as Game);
+            string output = "";
+            for (int i = 0; i < Game.SizeOfSide; i++)
+            {
+                for (int j = 0; j < Game.SizeOfSide; j++)
+                {
+                    output += Game[i, j] + "   ";
+                }
+                output += "\n";
+            }
+            Console.WriteLine(output);
+            Console.WriteLine(Game);
+        }
+        public void StartGame()
+        {
+            while (true)
+            {
+                Output();
+                Input();
+            }
         }
     }
 }

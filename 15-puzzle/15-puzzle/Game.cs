@@ -10,7 +10,7 @@ namespace _15_puzzle
     class Game : IPlayable
     {
         private int[,] side;
-        public readonly int SizeOfSide;
+        public int SizeOfSide { get; protected set; }
         protected Dictionary<int, Coordinate> coor;
         public Game(params int[] numberedSquare)
         {
